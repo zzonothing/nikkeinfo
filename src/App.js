@@ -1,5 +1,6 @@
 // src/App.js
 import React, { useState } from 'react';
+import './App.css';
 
 function App() {
   const gridSize = 10; // 5x2 = 10 squares
@@ -209,7 +210,7 @@ function App() {
             <img src={image.src} alt='' style={{display: 'none'}}></img>
         ))}
       </div>
-      <div style={{ display: 'flex', alignItems: 'center', margin: '0px 0px 0px 90px' }}>
+      <div style={{ display: 'flex', alignItems: 'center' }}>
         <h2>픽업 선택:</h2>
         <select 
           value={selectedCharacter} 
@@ -225,21 +226,13 @@ function App() {
           <option value="마리">마리</option>
         </select>
       </div>
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(5, 1fr)',
-        gap: '10px',
-        width: '550px', // Adjust width based on the new square size (5 * 125px + 4 * 10px gap)
-        height: '410px', // Adjust height based on the new square size (2 * 250px + 1 * 10px gap)
-      }}>
+      <div class='grid' style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)' }}>
         {gridImages.map((image, index) => (
           <div 
+            class={image ? image.borderColor : 'transparent'}
             key={index} 
-            style={{ 
-              width: '100px', 
-              height: '200px', 
-              backgroundColor: '#eee',
-              border: `10px solid ${image ? image.borderColor : 'transparent'}`, // 테두리 색상
+            style={{               
+              backgroundColor: '#eee'
             }}
           >
             {image && <img src={image.src} alt={`Random ${index}`} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />}
@@ -249,7 +242,7 @@ function App() {
       <button 
         onClick={handleRandomize} 
         style={{ 
-          margin: '60px 0 20px 90px',
+          margin: '20px 0 20px 0px',
           padding: '10px 20px',
           backgroundColor: '#007bff', // 버튼 배경색
           color: '#fff', // 버튼 글자색          
@@ -261,15 +254,14 @@ function App() {
       >
         10명 모집
       </button>
-      <div style={{ 
-        margin: '0 0 0 90px',
-        maxHeight: 'calc(100vh - 550px)', // 버튼과 이미지 영역을 제외한 나머지 공간을 계산하여 최대 높이 설정
-        overflowY: 'auto', // 결과가 많아지면 스크롤이 가능하도록 설정
-        width: '550px',
-        height: '145px',
-        border: '1px solid #ddd',
-        padding: '10px',
-      }}>
+      <div 
+        class='history'
+        style={{
+          maxHeight: 'calc(100vh - 550px)', // 버튼과 이미지 영역을 제외한 나머지 공간을 계산하여 최대 높이 설정
+          overflowY: 'auto', // 결과가 많아지면 스크롤이 가능하도록 설정
+          border: '1px solid #ddd',
+          padding: '10px',
+        }}>
         <div style={{ 
           fontSize: '20px',
           fontWeight: 'bold'

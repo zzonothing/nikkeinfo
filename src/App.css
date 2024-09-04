@@ -36,3 +36,147 @@
     transform: rotate(360deg);
   }
 }
+
+/* 모바일 화면에서의 스타일 */
+@media (max-width: 400px) {  
+  .blue {
+    width: 50px;
+    height: 100px;
+    border: 5px solid rgb(60, 60, 250);
+  }
+
+  .purple {
+    width: 50px;
+    height: 100px;
+    border: 5px solid rgb(180, 35, 180);
+  }
+
+  .yellow {
+    width: 50px;
+    height: 100px;
+    border: 5px solid rgb(255, 210, 0);
+  }
+
+  .transparent {
+    width: 50px;
+    height: 100px;
+    border: 5px solid transparent;
+  }
+
+  .grid {
+    gap: 5px;
+  }
+
+  .history {
+    width: 300px;
+    height: 145px;
+  }
+}
+
+/* 모바일 화면에서의 스타일 */
+@media (min-width: 401px) and (max-width: 600px) {  
+  .blue {
+    width: 65px;
+    height: 130px;
+    border: 5px solid rgb(60, 60, 250);
+  }
+
+  .purple {
+    width: 65px;
+    height: 130px;
+    border: 5px solid rgb(180, 35, 180);
+  }
+
+  .yellow {
+    width: 65px;
+    height: 130px;
+    border: 5px solid rgb(255, 210, 0);
+  }
+
+  .transparent {
+    width: 65px;
+    height: 135px;
+    border: 5px solid transparent;
+  }
+
+  .grid {
+    gap: 5px;
+  }
+
+  .history {
+    width: 300px;
+    height: 145px;
+  }
+}
+
+/* 태블릿 화면에서의 스타일 */
+@media (min-width: 601px) and (max-width: 1200px) {
+  .blue {
+    width: 100px;
+    height: 200px;
+    border: 8px solid rgb(60, 60, 250);
+  }
+
+  .purple {
+    width: 100px;
+    height: 200px;
+    border: 8px solid rgb(180, 35, 180);
+  }
+
+  .yellow {
+    width: 100px;
+    height: 200px;
+    border: 8px solid rgb(255, 210, 0);
+  }
+
+  .transparent {
+    width: 100px;
+    height: 200px;
+    border: 8px solid transparent;
+  }
+
+  .grid {
+    gap: 10px;
+  }
+ 
+  .history {
+    width: 550px;
+    height: 145px;
+  }
+}
+
+/* 데스크탑 화면에서의 스타일 */
+@media (min-width: 1201px) {
+  .blue {
+    width: 100px;
+    height: 200px;
+    border: 10px solid rgb(60, 60, 250);
+  }
+
+  .purple {
+    width: 100px;
+    height: 200px;
+    border: 10px solid rgb(180, 35, 180);
+  }
+
+  .yellow {
+    width: 100px;
+    height: 200px;
+    border: 10px solid rgb(255, 210, 0);
+  }
+
+  .transparent {
+    width: 100px;
+    height: 200px;
+    border: 10px solid transparent;
+  }
+
+  .grid {
+    gap: 10px;
+  }
+
+  .history {
+    width: 550px;
+    height: 145px;
+  }
+}
