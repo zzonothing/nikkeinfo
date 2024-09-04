@@ -1,0 +1,73 @@
+/* src/components/Toolbar.css */
+
+.toolbar-container {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  .toolbar-nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .toolbar-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    margin-right: 20px; /* 링크 사이 간격 */
+    border-radius: 10px;
+  }
+  
+  .toolbar-link:hover {
+    background-color: #555; /* 마우스 오버 시 배경 색상 */
+  }
+  
+  .toolbar-menu {
+    position: relative;
+  }
+  
+  .toolbar-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+  }
+  
+  .toolbar-button:hover {
+    background-color: #555; /* 마우스 오버 시 버튼 배경 색상 */
+  }
+  
+  .toolbar-icon {
+    margin-right: 8px; /* 아이콘과 텍스트 간의 여백 */
+  }
+  
+  .submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #555;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000; /* 메뉴가 다른 요소 위에 표시되도록 함 */
+    border-radius: 8px;
+    width: 100px;
+  }
+  
+  .submenu-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 10px;
+  }
+  
+  .submenu-link:hover {
+    background-color: #666; /* 마우스 오버 시 서브 메뉴 배경 색상 */
+  }
+  
