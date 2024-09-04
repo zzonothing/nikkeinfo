@@ -170,7 +170,11 @@ function GachaPage() {
     return text
       .replace('/images/SSR_', '')
       .replace('.webp', '')
-      .replace('_', '');
+      .replace('_', ' : ')
+      .replace('_', ' ')
+      .replace('_', ' ')
+      .replace('_', ' ')
+      .replace('_', ' ')
   };
 
   const [gridImages, setGridImages] = useState(Array(gridSize).fill(null));
