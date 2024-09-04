@@ -360,8 +360,10 @@ function OverloadPage() {
       overflow: 'hidden',
       backgroundColor: '#e0e0e0'
     }}>
-      <div style={{ margin: '20px', fontSize: '24px', fontWeight: 'bold' }}>
-        사용 모듈: {moduleCount}개
+      <div style={{ display: 'flex', alignItems: 'center' }}>
+        <div style={{ margin: '20px 0px 20px 0px', fontSize: '24px', fontWeight: 'bold' }}>
+          사용 모듈: {moduleCount}개
+        </div>
       </div>
       <div className='grid-container'>
         {overloaded.map((isOverloaded, index) => (

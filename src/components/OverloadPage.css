@@ -1,31 +1,5 @@
 /* src/OverloadPage.css */
 
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-  width: 40%;
-  max-width: 800px;
-}
-
-.grid-item {
-  background-color: #f0f0f0;
-  border: 1px solid #ddd;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  box-sizing: border-box;
-  aspect-ratio: 1 / 1;
-}
-
-.row {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-bottom: 1px solid #ddd;
-}
-
 .row:last-child {
   border-bottom: none;
 }
@@ -50,4 +24,90 @@
 
 .button:hover {
   background-color: #0056b3;
+}
+
+/* 모바일 화면에서의 스타일 */
+@media (max-width: 600px) {  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+  }
+  
+  .grid-item {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 300px;
+    height: 160px;
+  }
+
+  .row {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    font-size: 15px;
+  }
+}
+
+/* 태블릿 화면에서의 스타일 */
+@media (min-width: 601px) and (max-width: 1200px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  .grid-item {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 280px;
+    height: 200px;
+  }
+
+  .row {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    font-size: 15px;
+  }
+}
+
+/* 데스크탑 화면에서의 스타일 */
+@media (min-width: 1201px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  .grid-item {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 300px;
+    height: 250px;
+  }
+
+  .row {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+  }
 }
