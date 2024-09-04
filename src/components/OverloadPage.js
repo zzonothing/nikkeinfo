@@ -356,9 +356,8 @@ function OverloadPage() {
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
-      height: '100vh',
-      overflow: 'hidden',
-      backgroundColor: '#e0e0e0'
+      height: '100%',
+      padding: '0px 0px 30px 0px'
     }}>
       <div style={{ display: 'flex', alignItems: 'center' }}>
         <div style={{ margin: '20px 0px 20px 0px', fontSize: '24px', fontWeight: 'bold' }}>
