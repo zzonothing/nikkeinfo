@@ -195,7 +195,7 @@ function App() {
     setResults(newResults);
   };
 
-  return (
+  return (    
     <div style={{ 
       display: 'flex',
       flexDirection: 'column',
@@ -204,6 +204,11 @@ function App() {
       height: '100vh',
       overflow: 'hidden', // 페이지가 넘칠 경우 숨김
     }}>
+      <div>
+        {filteredImages.map((image) => (            
+            <img src={image.src} alt='' style={{display: 'none'}}></img>
+        ))}
+      </div>
       <div style={{ display: 'flex', alignItems: 'center', margin: '0px 0px 0px 90px' }}>
         <h2>픽업 선택:</h2>
         <select 
