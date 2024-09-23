@@ -19,22 +19,25 @@ function GachaPage() {
 
   const images = [
     // SSR - 픽업
-    { src: '/images/SSR_아스카.webp', probability: pickupProb, borderColor: 'yellow' },
-    { src: '/images/SSR_레이.webp', probability: pickupProb, borderColor: 'yellow' },
-    { src: '/images/SSR_마리.webp', probability: pickupProb, borderColor: 'yellow' },
+    // { src: '/images/SSR_아스카.webp', probability: pickupProb, borderColor: 'yellow' },
+    // { src: '/images/SSR_레이.webp', probability: pickupProb, borderColor: 'yellow' },
+    // { src: '/images/SSR_마리.webp', probability: pickupProb, borderColor: 'yellow' },
+    { src: '/images/SSR_루주.webp', probability: pickupProb, borderColor: 'yellow' },
+    { src: '/images/SSR_퀀시_이스케이프_퀸.webp', probability: pickupProb, borderColor: 'yellow' },
+    { src: '/images/SSR_팬텀.webp', probability: pickupProb, borderColor: 'yellow' },
 
     // SSR - 필그림
-    { src: '/images/SSR_하란.webp', probability: pilgrimProb / pilgrimCount, borderColor: 'yellow' },    
-    { src: '/images/SSR_스노우화이트.webp', probability: pilgrimProb / pilgrimCount, borderColor: 'yellow' },
-    { src: '/images/SSR_노아.webp', probability: pilgrimProb / pilgrimCount, borderColor: 'yellow' },
-    { src: '/images/SSR_홍련.webp', probability: pilgrimProb / pilgrimCount, borderColor: 'yellow' },
-    { src: '/images/SSR_이사벨.webp', probability: pilgrimProb / pilgrimCount, borderColor: 'yellow' },    
-    { src: '/images/SSR_라푼젤.webp', probability: pilgrimProb / pilgrimCount, borderColor: 'yellow' },    
-    { src: '/images/SSR_모더니아.webp', probability: pilgrimProb / pilgrimCount, borderColor: 'yellow' },
-    { src: '/images/SSR_도로시.webp', probability: pilgrimProb / pilgrimCount, borderColor: 'yellow' },
-    { src: '/images/SSR_레드후드.webp', probability: pilgrimProb / pilgrimCount, borderColor: 'yellow' },
-    { src: '/images/SSR_홍련_흑영.webp', probability: pilgrimProb / pilgrimCount, borderColor: 'yellow' },
-    { src: '/images/SSR_크라운.webp', probability: pilgrimProb / pilgrimCount, borderColor: 'yellow' },
+    { src: '/images/SSR_하란.webp', probability: pilgrimProb / pilgrimCount, borderColor: 'yellow' }, // 1
+    { src: '/images/SSR_스노우화이트.webp', probability: pilgrimProb / pilgrimCount, borderColor: 'yellow' }, // 2
+    { src: '/images/SSR_노아.webp', probability: pilgrimProb / pilgrimCount, borderColor: 'yellow' }, // 3
+    { src: '/images/SSR_홍련.webp', probability: pilgrimProb / pilgrimCount, borderColor: 'yellow' }, // 4
+    { src: '/images/SSR_이사벨.webp', probability: pilgrimProb / pilgrimCount, borderColor: 'yellow' }, // 5
+    { src: '/images/SSR_라푼젤.webp', probability: pilgrimProb / pilgrimCount, borderColor: 'yellow' }, // 6
+    { src: '/images/SSR_모더니아.webp', probability: pilgrimProb / pilgrimCount, borderColor: 'yellow' }, // 7
+    { src: '/images/SSR_도로시.webp', probability: pilgrimProb / pilgrimCount, borderColor: 'yellow' }, // 8
+    { src: '/images/SSR_레드후드.webp', probability: pilgrimProb / pilgrimCount, borderColor: 'yellow' }, // 9
+    { src: '/images/SSR_홍련_흑영.webp', probability: pilgrimProb / pilgrimCount, borderColor: 'yellow' }, // 10
+    { src: '/images/SSR_크라운.webp', probability: pilgrimProb / pilgrimCount, borderColor: 'yellow' }, // 11
 
     // SSR - 일반
     { src: '/images/SSR_맥스웰.webp', probability: ssrProb / ssrCount, borderColor: 'yellow' }, // 1
@@ -137,7 +140,7 @@ function GachaPage() {
     { src: '/images/R_프로덕트23.webp', probability: rProb / rCount, borderColor: 'blue' },
   ];
 
-  const [selectedCharacter, setSelectedCharacter] = useState('아스카'); // 초기값을 "아스카"로 설정
+  const [selectedCharacter, setSelectedCharacter] = useState('퀀시 : 이스케이프 퀸'); // 초기값을 "아스카"로 설정
 
   const handleCharacterChange = (event) => {
     setSelectedCharacter(event.target.value);
@@ -147,9 +150,9 @@ function GachaPage() {
   };
 
   const filteredImages = images.filter(image => {
-    if (selectedCharacter === '아스카' && (image.src.includes('/images/SSR_레이.webp') || image.src.includes('/images/SSR_마리.webp'))) return false;
-    if (selectedCharacter === '레이' && (image.src.includes('/images/SSR_아스카.webp') || image.src.includes('/images/SSR_마리.webp'))) return false;
-    if (selectedCharacter === '마리' && (image.src.includes('/images/SSR_아스카.webp') || image.src.includes('/images/SSR_레이.webp'))) return false;
+    if (selectedCharacter === '루주' && (image.src.includes('/images/SSR_퀀시_이스케이프_퀸.webp') || image.src.includes('/images/SSR_팬텀.webp'))) return false;
+    if (selectedCharacter === '퀀시 : 이스케이프 퀸' && (image.src.includes('/images/SSR_루주.webp') || image.src.includes('/images/SSR_팬텀.webp'))) return false;
+    if (selectedCharacter === '팬텀' && (image.src.includes('/images/SSR_루주.webp') || image.src.includes('/images/SSR_퀀시_이스케이프_퀸.webp'))) return false;
     return true;
   });
 
@@ -225,9 +228,12 @@ function GachaPage() {
             fontSize: '16px',
           }}
         >
-          <option value="아스카">아스카</option>
+          {/* <option value="아스카">아스카</option>
           <option value="레이">레이</option>
-          <option value="마리">마리</option>
+          <option value="마리">마리</option> */}
+          <option value="루주">루주</option>
+          <option value="퀀시 : 이스케이프 퀸">퀀시 : 이스케이프 퀸</option>
+          <option value="팬텀">팬텀</option>
         </select>
       </div>
       <div class='grid' style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)' }}>
